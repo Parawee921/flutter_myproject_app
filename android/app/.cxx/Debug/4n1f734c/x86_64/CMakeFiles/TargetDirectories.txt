@@ -1,0 +1,2 @@
+C:/praew/DramaVoice/flutter_myproject_app/android/app/.cxx/Debug/4n1f734c/x86_64/CMakeFiles/edit_cache.dir
+C:/praew/DramaVoice/flutter_myproject_app/android/app/.cxx/Debug/4n1f734c/x86_64/CMakeFiles/rebuild_cache.dir
