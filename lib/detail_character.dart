@@ -61,14 +61,6 @@ class _DetailCharacter1State extends State<DetailCharacter1> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30), // มุมโค้งมน
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.purple.withOpacity(0.3), // เงาสีม่วงอ่อน
-                    spreadRadius: 3,
-                    blurRadius: 12,
-                    offset: const Offset(0, 5), // การเคลื่อนที่ของเงา
-                  ),
-                ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

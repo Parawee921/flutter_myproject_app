@@ -18,7 +18,7 @@ class _Ss1ss2Page1State extends State<Ss1ss2Page1> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List<Widget> _pages = [
-     CharacterPage(), // หน้า Home ที่แสดงตัวละคร
+    CharacterPage(), // หน้า Home ที่แสดงตัวละคร
     const AllCharacter(),
     const GameMatchingPage(),
     const Ss1ss2Page(),
@@ -159,7 +159,7 @@ class _Ss1ss2PageState extends State<Ss1ss2Page> {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      "The story of *The Secret Life of Pets* takes place in New York City...",
+                      "The Secret Life of Pets tells the story of Max, a Jack Russell Terrier, whose life is turned upside down when his owner adopts a large dog named Duke. The two dogs don't get along and get lost in the city. While they're missing, their pet friends from the apartment, led by a bunny named Snowball, try to rescue them. Max and Duke eventually work together to overcome challenges and return home safely, learning about friendship and loyalty along the way.",
                       style: TextStyle(fontSize: 16),
                     ),
                     const SizedBox(height: 20),
@@ -197,7 +197,7 @@ class _Ss1ss2PageState extends State<Ss1ss2Page> {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      "The second installment of *The Secret Life of Pets* follows Max...",
+                      "*The Secret Life of Pets 2** follows Max, who becomes protective of his owner’s son, Liam, while also facing new challenges. He goes on a farm vacation, where he learns to overcome his fears with the help of a tough farm dog, Rooster. Meanwhile, Gidget tries to rescue Max’s favorite toy from a cat-filled apartment, and Snowball plays superhero to save a dog from a circus. The movie explores bravery, friendship, and growing up.",
                       style: TextStyle(fontSize: 16),
                     ),
                     const SizedBox(height: 20),

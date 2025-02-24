@@ -20,8 +20,8 @@ class _GamePageState extends State<GamePage> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List<Widget> _pages = [
-     CharacterPage(),
-    const AllCharacter(), // Placeholder หรือหน้าอื่นๆ ที่จะเพิ่ม
+    CharacterPage(),
+    const AllCharacter(), 
     const GameMatchingPage(),
     const Ss1ss2Page(),
     
@@ -77,16 +77,16 @@ class GameMatchingPage extends StatefulWidget {
 
 class _GameMatchingPageState extends State<GameMatchingPage> {
   List<String> imagePaths = [];
-  List<String> shuffledImages = [];
-  List<bool> isSelected = List.generate(8, (_) => false);
+  List<String> shuffledImages = [];//คือlist เก็บภาพที่สุ่มมาใช้ในเกม
+  List<bool> isSelected = List.generate(8, (_) => false);//ลิสต์ที่เก็บสถานะของการเลือกภาพ (เลือกแล้วหรือยังไม่เลือก)
   int selectedCount = 0;
-  int selectedIndex = -1;
-  int matchedPairs = 0;
+  int selectedIndex = -1; //ตัวแปรเก็บดัชนีของภาพที่เลือก
+  int matchedPairs = 0; //ตัวแปรที่เก็บจำนวนคู่ภาพที่จับคู่ได้
 
   @override
-  void initState() {
+  void initState() { //เรียกเมื่อ widget ถูกสร้างขึ้นครั้งแรก และใช้โหลดข้อมูลภาพ
     super.initState();
-    _loadImagePaths();
+    _loadImagePaths(); //ดึงภาพจาก assets
 
     // ซ่อนรูปภาพทั้งหมดหลังจาก 3 วินาที
     Future.delayed(const Duration(seconds: 3), () {
@@ -98,7 +98,7 @@ class _GameMatchingPageState extends State<GameMatchingPage> {
 
   Future<void> _loadImagePaths() async {
     try {
-      final manifestJson = await rootBundle.loadString('AssetManifest.json');
+      final manifestJson = await rootBundle.loadString('AssetManifest.json');//ฟังก์ชันนี้จะโหลดไฟล์ AssetManifest.json ซึ่งเก็บข้อมูลเกี่ยวกับไฟล์ในโฟลเดอร์ assets ของแอป
       final Map<String, dynamic> manifestMap = json.decode(manifestJson);
       final List<String> assets = manifestMap.keys
           .where((path) => path.startsWith('assets/images/'))
@@ -120,14 +120,14 @@ class _GameMatchingPageState extends State<GameMatchingPage> {
     if (imagePaths.length < 4) return [];
     List<String> selectedImages = List.from(imagePaths)..shuffle(random);
     List<String> pairs = selectedImages.take(4).toList();
-    pairs = [...pairs, ...pairs];
-    pairs.shuffle(random);
+    pairs = [...pairs, ...pairs];//คัดลอกภาพ 4 ภาพที่เลือกมาซ้ำอีกครั้งเพื่อสร้างคู่
+    pairs.shuffle(random);//สุ่มลำดับภาพทั้งหมด (รวมภาพคู่) เพื่อให้เกมแต่ละครั้งไม่เหมือนกัน
     return pairs;
   }
 
   void _selectImage(int index) {
-    if (isSelected[index]) return;
-    setState(() {
+    if (isSelected[index]) return;//ถ้าภาพนี้ถูกเลือกแล้ว, จะไม่ทำอะไร
+    setState(() { //ใช้เพื่ออัปเดตสถานะของการเลือกภาพ (เช่น เลือกแล้วหรือยังไม่ได้เลือก)
       isSelected[index] = true;
       selectedCount++;
 

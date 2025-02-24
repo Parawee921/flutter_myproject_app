@@ -14,10 +14,10 @@ class CharacterPage1 extends StatefulWidget {
 
 class _CharacterPage1State extends State<CharacterPage1> {
   int _page = 0;
-  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey(); //CurvedNavigationBar ซึ่งเป็นแถบนำทางที่สามารถเลือกเพจต่าง ๆ ได้
 
   final List<Widget> _pages = [
-     CharacterPage(),
+    CharacterPage(),
     const AllCharacter(),
     const GameMatchingPage(), 
     const Ss1ss2Page(),
@@ -174,16 +174,16 @@ class _AllCharacterState extends State<AllCharacter> {
                         padding: const EdgeInsets.all(10),
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                          childAspectRatio: 0.8,
+                          crossAxisCount: 2,//กำหนดจำนวนคอลัม
+                          crossAxisSpacing: 10,//ระยะห่างระหว่างคอลัมน์ในแนวนอน (
+                          mainAxisSpacing: 10,//ระยะห่างระหว่างแถวในแนวตั้ง
+                          childAspectRatio: 0.8,//กำหนดอัตราส่วนของขนาดของแต่ละไอเทม
                         ),
                         itemCount: filteredCharacters.length,
                         itemBuilder: (context, index) {
                           return character(
-                            filteredCharacters[index]["imagePath"]!,
-                            filteredCharacters[index]["name"]!,
+                            filteredCharacters[index]["imagePath"]!,//เป็นการดึงข้อมูลเส้นทางของรูปภาพของตัวละครจาก filteredCharacters ที่ตำแหน่ง index
+                            filteredCharacters[index]["name"]!,//เป็นการดึงชื่อของตัวละครจาก filteredCharacters ที่ตำแหน่ง index
                           );
                         },
                       ),
