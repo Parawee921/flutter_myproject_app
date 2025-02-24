@@ -17,7 +17,7 @@ class _CharacterPage1State extends State<CharacterPage1> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List<Widget> _pages = [
-    const CharacterPage(),
+     CharacterPage(),
     const AllCharacter(),
     const GameMatchingPage(), 
     const Ss1ss2Page(),

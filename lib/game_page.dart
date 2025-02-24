@@ -20,7 +20,7 @@ class _GamePageState extends State<GamePage> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List<Widget> _pages = [
-    const CharacterPage(),
+     CharacterPage(),
     const AllCharacter(), // Placeholder หรือหน้าอื่นๆ ที่จะเพิ่ม
     const GameMatchingPage(),
     const Ss1ss2Page(),

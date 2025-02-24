@@ -18,7 +18,7 @@ class _Ss1ss2Page1State extends State<Ss1ss2Page1> {
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List<Widget> _pages = [
-    const CharacterPage(), // หน้า Home ที่แสดงตัวละคร
+     CharacterPage(), // หน้า Home ที่แสดงตัวละคร
     const AllCharacter(),
     const GameMatchingPage(),
     const Ss1ss2Page(),
